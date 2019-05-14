@@ -3,4 +3,9 @@
 <ul>
   <li><strong>Title:</strong> <%= @task.title %></li>
   <li><strong>Details:</strong> <%= @task.details %></li>
+  <% if @task.completed == false %>
+  <li><strong>Status</strong> To do!</li>
+  <% else %>
+  <li><strong>Status</strong> Done</li>
+  <% end %>
 </ul>
