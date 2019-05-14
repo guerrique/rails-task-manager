@@ -1,9 +1,10 @@
 <h1>To Do List</h1>
-<%= link_to 'create a new task', new_task_path %>
+<%= link_to 'Add a new task', new_task_path %>
 <ul>
   <% @tasks.each do |task| %>
   <li>
     <%= link_to task.title, task_path(task) %>
+    <%= link_to 'delete', task_path(task), method: :delete, data: { confirm: "Are you sure? Really?"} %>
   </li>
   <% end %>
 </ul>
